@@ -4,7 +4,7 @@ console.log('cw.js loaded');
 function main() {
     // ex1();
     // ex2();
-    ex3();
+    // ex3();
     //challenge();
     //superMarioChallenge();
 }
@@ -15,6 +15,7 @@ function ex1() {
     let check = document.querySelector('#check');
     //Create a function to change the label text if the checkbox is checked
     doNotClick = (event) => {
+        // Nice use of the checked property of input type checked
         //Changes the label if it is checked
         if (check.checked === true){
         checkLabel.innerHTML = 'I TOLD YOU NOT TO CLICK THIS!!!';
