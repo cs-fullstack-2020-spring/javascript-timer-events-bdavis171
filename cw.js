@@ -71,7 +71,26 @@ function ex3() {
     let startCount = document.querySelector('#startCount');
     let countDown = document.querySelector('#countDown');
 
-    //create a function
+    //create a function to start the countdown timer from 10 to 'liftoff'
+    liftOff = event => {
+       let timerId = setInterval(ev =>{
+           let count = 10;
+           while (count >= 0){
+           countDown.innerHTML = `${count}`;
+           count -= 1;
+           if (count === 0){
+            clearInterval(timerId);
+        }
+        }
+        
+       },1000);
+        
+
+    }
+
+    //add the above function to the button as an event
+    startCount.addEventListener('click',liftOff);
+
 }
 
 
